@@ -3,6 +3,7 @@ module.exports = {
   description: 'Just playing around.',
   lang: 'en-US',
   themeConfig: {
+    // 展示搜索框
     algolia: {
       appKey: '',
       indexName: '',
@@ -10,15 +11,22 @@ module.exports = {
         faeFilters: ['tags:guide,api']
       }
     },
-    nav: [{
-        text: 'Guide',
+    nav: [
+      {
+        text: '指南',
         link: '/',
-        activeMatch: '^/$|^/guide/'
+      },
+      {
+        text: '组件',
+        link: '/components/',
+      },
+      {
+        text: '资源',
+        link: '/',
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/lxKylin',
-        activeMatch: '^/$|^/guide/'
+        link: 'https://github.com/lxKylin/vitepressdemo',
       },
     ],
     sidebar: {
@@ -27,12 +35,12 @@ module.exports = {
   },
   markdown: {
     config: (md) => {
-      // 这里可以使用 markdown-it 插件，vitepress-theme-demoblock就是基于此开发的
       const {
         demoBlockPlugin
       } = require('vitepress-theme-demoblock')
       md.use(demoBlockPlugin)
-    }
+    },
+    lineNumbers: true
   }
 }
 
@@ -71,7 +79,13 @@ function getDemoSidebar() {
       ],
     },
     {
-      text: "布局组件",
+      text: "配置组件",
+    },
+    {
+      text: "Form 表单组件",
+    },
+    {
+      text: "Data 数据展示",
     },
   ]
 }
