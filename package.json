@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs",
+    "register:components": "vitepress-rc"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^1.2.0",
+    "vitepress": "^0.20.1",
+    "vitepress-theme-demoblock": "^1.4.1"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.7"
+  }
+}
